@@ -1,0 +1,54 @@
+// Import page-specific CSS files here.
+@import "home";
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+
+
+
+.cards {
+  margin-top: 80px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-around;
+}
+
+.card {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+  color: white;
+  opacity: 0.93;
+  background-size: cover;
+  border-radius: 3px;
+  margin-right: 20px;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  margin-bottom: 30px;
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.banner {
+  display: flex;
+  background-size: cover;
+  height: 300px;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.banner-content {
+  text-align: center;
+}
+
+.text h1 {
+  margin: 40px;
+  color: white;
+  opacity: 0.9;
+  font-family: 'Permanent Marker', cursive;
+  font-size: 55px;
+}
+
+
