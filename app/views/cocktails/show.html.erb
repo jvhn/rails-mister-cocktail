@@ -17,9 +17,9 @@
     <% array.each do |ingredient, dose|%>
       <p><strong><%= ingredient.name %>:</strong> <%= dose.description %> <%= link_to dose_path(dose), method: :delete do %><i class="fa fa-trash"></i><% end %></p>
     <% end %>
-    <div class="text-center add-link">
-      <%= link_to 'Add a dose', new_cocktail_dose_path(@cocktail), class: 'btn btn-primary inputStyling' %>
-    </div>
+    <%= link_to new_cocktail_dose_path(@cocktail) do %>
+      <i class="fa fa-plus"></i>
+    <% end %>
   </div>
 </div>
 <div class="wrapper-grey">
