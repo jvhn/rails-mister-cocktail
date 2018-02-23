@@ -42,6 +42,7 @@ gem "font-awesome-rails"
 gem 'autoprefixer-rails'
 gem 'jquery-rails' # Add this line if you use Rails 5.1
 gem 'cloudinary'
+gem 'carrierwave', '~> 1.2'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

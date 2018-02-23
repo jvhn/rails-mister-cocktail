@@ -5,7 +5,8 @@
   <div class="form">
     <%= simple_form_for @cocktail do |f| %>
       <%= f.input :name, label: 'Cocktail\'s name', input_html: { class: "inputStyling" }%>
-      <%= f.input :photo_url, input_html: { class: "inputStyling" } %>
+      <%= f.input :photo, input_html: { class: "inputStyling" } %>
+      <%= f.input :photo_cache, as: :hidden %>
       <div class="text-right"><%= f.button :submit, class: 'btn btn-primary inputStyling' %></div>
     <% end %>
   </div>
