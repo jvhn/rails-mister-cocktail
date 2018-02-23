@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container" id="container_show">
   <div class="title">
     <h1><%= @cocktail.name %></h1>
   </div>
 
   <% array = []%>
 
-  <% @cocktail.ingredients.each do |ingredient| %>
+  <% @cocktail.ingredients.order('name ASC').each do |ingredient| %>
     <% @cocktail.doses.each_with_index do |dose, index| %>
       <% if ingredient.id == dose.ingredient_id %>
         <% array << [ingredient, dose] %>
@@ -22,5 +22,26 @@
     </div>
   </div>
 </div>
+<div class="wrapper-grey">
+  <div class="title_show">
+    <h2> Other cocktails you should taste </h2>
+  </div>
+  <div class='row row_show'>
+    <% cocktail_list = Cocktail.all %>
+    <% if @cocktail.id < 5 %>
+      <% cocktail_list = cocktail_list[5..7] %>
+    <% else %>
+      <% cocktail_list = cocktail_list.first(3) %>
+    <% end %>
+    <% cocktail_list.each do |cocktail| %>
+      <%= link_to cocktail_path(cocktail), class: "card-link" do %>
+        <div class="card card_show" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.4) 0%, rgba(0,0,0,0.3) 50%), url('<%=cocktail.photo_url%>');">
+          <h4><%= cocktail.name %></h4>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
+
 
 

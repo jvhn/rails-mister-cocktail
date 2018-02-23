@@ -1,11 +1,11 @@
-h1 {
+h1, h2 {
   font-family: 'Permanent Marker', cursive;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 60px;
 }
 
 .dose-list {
-  margin-top: 80px;
+  margin-top: 60px;
   margin-right: 400px;
   margin-left: 400px;
 }
@@ -16,4 +16,29 @@ h1 {
 
 p {
   font-family: 'Roboto Slab', serif;
+}
+
+.wrapper-grey {
+  background-color: lightgrey;
+}
+
+#container_show {
+  height: 402px;
+}
+
+.row_show {
+  margin-right: 100px;
+  margin-left: 100px;
+}
+
+.title_show h2 {
+  padding: 30px;
+}
+
+
+.card_show {
+  margin-bottom: 50px;
+  margin-right: 90px;
+  margin-left: 90px;
+
 }
