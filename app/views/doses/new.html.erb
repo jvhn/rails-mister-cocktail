@@ -1,9 +1,12 @@
-<h1>New dose</h1>
-
-
-
-<%= simple_form_for [@cocktail, @dose] do |f| %>
-  <%= f.input :description %>
-  <%= f.input :ingredient_id, collection: Ingredient.all %>
-  <%= f.button :submit %>
-<% end %>
+<div class="container">
+  <div class="title">
+    <h1>New dose for the <%= @cocktail.name %></h1>
+  </div>
+  <div class="form">
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.input :ingredient_id, collection: Ingredient.all.order('name ASC'), input_html: { class: "inputStyling" }  %>
+      <%= f.input :description, label: 'Quantity or explication', input_html: { class: "inputStyling" } %>
+      <div class="text-right"><%= f.button :submit, class: 'btn btn-primary inputStyling' %></div>
+    <% end %>
+  </div>
+</div>

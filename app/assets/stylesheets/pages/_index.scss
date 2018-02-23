@@ -1,8 +1,10 @@
 // Import page-specific CSS files here.
 @import "home";
-@import url('https://fonts.googleapis.com/css?family=Permanent+Marker');
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Roboto+Slab');
 
-
+body {
+  background-color: #FAFAFA;
+}
 
 .cards {
   margin-top: 80px;
@@ -22,21 +24,26 @@
   color: white;
   opacity: 0.93;
   background-size: cover;
-  border-radius: 3px;
+  border-radius: 4px;
   margin-right: 20px;
-  box-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+  box-shadow: 1px 1px 4px rgba(0,0,0,0.5);
   margin-bottom: 30px;
   &:hover {
     opacity: 1;
   }
 }
 
+.card h4 {
+  font-family: 'Roboto Slab', serif;
+}
+
 .banner {
   display: flex;
   background-size: cover;
-  height: 300px;
+  height: 400px;
   justify-content: space-around;
   align-items: center;
+  box-shadow: 0px 1px 4px rgba(0,0,0,0.6);
 }
 
 .banner-content {
@@ -48,7 +55,18 @@
   color: white;
   opacity: 0.9;
   font-family: 'Permanent Marker', cursive;
-  font-size: 55px;
+  font-size: 58px;
+}
+
+.text p {
+  color: white;
+  opacity: 0.9;
+  font-family: 'Roboto Slab', serif;
+  font-size: 17px;
+}
+
+.card-link:hover {
+  text-decoration: none;
 }
 
 

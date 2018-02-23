@@ -8,6 +8,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 0px 0.2px 4px rgba(0,0,0,0.5);
 }
 
 .navbar-wagon-right {
@@ -18,9 +19,26 @@
 
 .navbar-text {
   font-family: 'Permanent Marker', cursive;
-  color: grey;
+  color: white;
+  opacity: 0.5;
   &:hover {
     text-decoration: none;
-    color: black;
+    opacity: 1;
   }
+}
+
+.navbar-fixed {
+  top: 0px;
+  z-index: 100;
+  position: sticky;
+  width: 100%;
+  background: rgba(0,0,0,0.05);
+}
+
+#nav_bar {
+  border: 0;
+  background-color: #202020;
+  border-radius: 0px;
+  margin-bottom: 0;
+  height: 50px;
 }
